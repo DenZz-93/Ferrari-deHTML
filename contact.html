@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Ferrari de HTML
+  </title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+    #image1 {
+      text-align: center;
+    }
+    p {
+    color: red;
+    }
+    #title-web {
+      text-align: center;
+    }
+  </style>
+  <head>
+<body>
+<h2 id="title-web">Contact</h2>
+Pour nous contacte appele au 07******** ou par Mail <a href="mailto:someone@example.com">Denis*****@gmail.com</a>
+
+<form action="non.php" method="get" onsubmit="conversion(this.euro.value) ; return false">
+<p>
+<input type="text"   value="1" id="euro" />
+<input type="submit" value="=" />
+<input type="text"   value="" id="dollar" size="30" />
+</p>
+</form>
+
+chevaux / hp
+
+<form action="non.php" method="get" onsubmit="conversion_power(this.chevaux.value) ; return false">
+<p>
+<input type="text"   value="1" id="chevaux" />
+<input type="submit" value="=" />
+<input type="text"   value="" id="hp" size="30" />
+</p>
+</form>
+</body>
+<script>
+// ######################################################
+
+function conversion1(eur) {
+
+// ######################################################
+
+// on efface l'ancienne conversion
+
+document.getElementById("dollar").value = ""
+
+if (eur=="") { alert("pas de bras, pas de chocolat !") } else {
+
+  if (console) console.debug("on convertit " + eur + " euros ")
+
+  taux = 1.408 // au 30 mars 2011
+  dol = eur*taux
+  document.getElementById("dollar").value = dol
+
+} ; // fin de si on a une valeur à traiter
+
+} ; // fin de fonction conversion1
+
+// ######################################################
+
+function conversion2(eurp) { // p comme probable
+
+// ######################################################
+
+// on efface l'ancienne conversion
+
+document.getElementById("dollar").value = ""
+
+if (eurp=="") { alert("pas de bras, pas de chocolat !") } else {
+
+  if (console) console.debug("on convertit " + eurp + " euros ")
+
+  taux = 1.408 // au 30 mars 2011
+
+  // amélioration 1 : on teste s'il s'agit d'un nombre (à l'américaine)
+
+  if (!/^[0-9]+\.?[0-9]*$/.test(eurp)) {
+     if (console) console.debug("pb de nombre pour " + eurp )
+     alert("ce n'est pas un nombre !")
+  } else {
+     eur = parseFloat(eurp)
+     dol = eur*taux
+     if (console) console.debug("cela fait " + dol )
+
+     document.getElementById("dollar").value = dol
+  } ; // finsi
+
+} ; // fin de si on a une valeur à traiter
+
+} ; // fin de fonction conversion2
+
+// ######################################################
+
+function conversion_power(eurp) { // p comme probable
+
+// ######################################################
+
+// on efface l'ancienne conversion
+
+document.getElementById("hp").value = ""
+
+if (eurp=="") { alert("pas de bras, pas de chocolat !") } else {
+
+  if (console) console.debug("on convertit " + eurp + " euros ")
+
+  taux = 0.98623510372089 // au 30 mars 2011
+
+  // amélioration 2 : on convertit les virgules en point
+
+  eurp = eurp.replace(/,/,".")
+
+  if (!/^[0-9]+\.?[0-9]*$/.test(eurp)) {
+     if (console) console.debug("pb de nombre pour " + eurp )
+     alert("ce n'est pas un nombre !")
+  } else {
+     eur = parseFloat(eurp)
+     dol = eur*taux
+     if (console) console.debug("cela fait " + dol )
+     // on arrondit, sinon c'est illsible
+     dol = dol.toFixed(2)
+     document.getElementById("hp").value = eur + " chevaux fait/font " + dol + " hp(s) "
+  } ; // finsi
+
+} ; // fin de si on a une valeur à traiter
+
+} ; // fin de fonction conversion
+
+function conversion(eurp) { // p comme probable
+
+// ######################################################
+
+// on efface l'ancienne conversion
+
+document.getElementById("dollar").value = ""
+
+if (eurp=="") { alert("pas de bras, pas de chocolat !") } else {
+
+  if (console) console.debug("on convertit " + eurp + " euros ")
+
+  taux = 1.408 // au 30 mars 2011
+
+  // amélioration 2 : on convertit les virgules en point
+
+  eurp = eurp.replace(/,/,".")
+
+  if (!/^[0-9]+\.?[0-9]*$/.test(eurp)) {
+     if (console) console.debug("pb de nombre pour " + eurp )
+     alert("ce n'est pas un nombre !")
+  } else {
+     eur = parseFloat(eurp)
+     dol = eur*taux
+     if (console) console.debug("cela fait " + dol )
+     // on arrondit, sinon c'est illsible
+     dol = dol.toFixed(2)
+     document.getElementById("dollar").value = eur + " euro(s) fait/font " + dol + " dollar(s) "
+  } ; // finsi
+
+} ; // fin de si on a une valeur à traiter
+
+} ; // fin de fonction conversion
+
+// ######################################################
+</script>
+</html>
+
+<nav id="menu">
+    <div class="element_menu">
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="autre.html">Autre Voiture</a></li>
+            <li><a href="Boutique.html">Boutique</a></li>
+
+        </ul>
+    </div>
+</nav>

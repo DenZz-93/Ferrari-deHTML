@@ -4,6 +4,7 @@
   <title>
    Ferrari de HTML
   </title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <style>
     #image1 {
       text-align: center;
@@ -11,13 +12,50 @@
     p {
       color: red;
     }
+    #title-web {
+      text-align: center;
+    }
   </style>
  </head>
  <body>
-  Ceci est une phrase avec un <a href="http://ferrari.com">hyperlien</a>.
-  <div id="image1"><img src="ferrari.jpg" alt="Ferrari"></div>
+   <div class="container">
+<h2 id="title-web">Ferrari</h2>
+  <div id="image1"><img src="ferrari.jpg" alt="Ferrari" class="img-thumbnail"></div>
   <p>
-   Ceci n'est pas une Ferrari
+    <a href="http://ferrari.com"  class="btn btn-primary">Site web officiel</a>
   </p>
- </body>
+
+<h1>Fiche Technique</h1>
+
+<table class="table">
+  <tr>
+    <td><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Puissance</td><td>670ch</td>
+  </tr>
+  <tr>
+    <td><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Boite</td><td>Automatique</td>
+  </tr>
+  <tr>
+    <td><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Vitesse maximum</td><td>325 km/h</td>
+  </tr>
+  <tr>
+    <td><span class="glyphicon glyphicon-road" aria-hidden="true"></span> Acceleration 0/100km/h</td><td>3 sec</td>
+  </tr>
+  <tr>
+    <td><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Reservoir</td><td>100 l</td>
+  </tr>
+</table>
+  </div>
+</body>
 </html>
+
+<nav id="menu">
+    <div class="element_menu">
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="autre.html">Autre Voiture</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Boutique.html">Boutique</a></li>
+
+        </ul>
+    </div>
+</nav>
